@@ -1,0 +1,19 @@
+@import '../../styles/abstracts/variables';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10%;
+    height: 8vh;
+
+    .logo {
+        a {
+            font-family: $primaryFont;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
