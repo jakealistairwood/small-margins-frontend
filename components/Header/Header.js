@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import styles from './Header.module.scss'
 import Searchbar from '../Searchbar'
+import { AiFillCaretDown } from 'react-icons/ai'
+import { GiShoppingCart } from 'react-icons/gi'
+import { FaHeart } from 'react-icons/fa'
 
 const Header = () => {
     return (
@@ -12,7 +15,12 @@ const Header = () => {
             </div> 
             <Searchbar />
             <div className={styles.userControls}>
-                
+                <button className={styles.modalBtn}>
+                    <span>Login</span>
+                    <AiFillCaretDown />
+                </button>
+                <FaHeart className={styles.favouritesIcon}/>
+                <GiShoppingCart className={styles.cartIcon} />
             </div>
         </header>
     )

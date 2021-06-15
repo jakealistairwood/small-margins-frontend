@@ -1,0 +1,70 @@
+{
+    "shoes": [
+        {
+            "id": "1",
+            "brand": "Saucony",
+            "model": "Endorphin Speed 2",
+            "color": "Reverie",
+            "description": "Plated for versatile, always-on speed. The Endorphin Speed 2 is a natural winner, and now it's back and better than ever. Between its ultralight PWRRUN PB cushioning and responsive nylon plate, it's evident this shoe can do it all. From speed work to longer runs, from workouts to race day, it's more than ready to rock.",
+            "price": "155",
+            "img": "https://s7d4.scene7.com/is/image/WolverineWorldWide/S20688-40_1?wid=826&hei=685&resMode=bilin&op_usm=0.5,1.0,8,0&iccEmbed=0&printRes=72",
+            "qty": "12",
+            "sizes": ["6, 7, 8, 9, 10, 11"]
+        },
+        {
+            "id": "2",
+            "brand": "New Balance",
+            "model": "FuelCell RC Elite v2",
+            "color": "Deep violet with black",
+            "description": "The FuelCell RC Elite v2 is designed to give you a competitive edge on race day. This lightweight men’s running shoe features our high-rebound FuelCell midsole compound paired with a full-length carbon fiber plate to help promote energy return and propulsion.",
+            "price": "210",
+            "img": "https://nb.scene7.com/is/image/NB/mrcelvb2_nb_02_i?$pdpflexf2$&fmt=webp&wid=472&hei=472",
+            "qty": "8",
+            "sizes": ["6, 8, 9, 11"]
+        },
+        {
+            "id": "3",
+            "brand": "Hoka One One",
+            "model": "Mach 4",
+            "color": "Blue Fog / Fiesta",
+            "description": "In its fourth edition, the Mach 4 takes its biggest leap forward, built on themes inspired by the Rocket X and Carbon X. This everyday running shoe delivers a lively ride and energetic underfoot feel that is unquestionably HOKA. Softer and bouncier than the previous iteration, the Mach 4 employs a harmonious blend of foams — merging an incredibly soft, lightweight foam on top with rubberised foam directly beneath. This up-tempo shoe has been created with a new pull tab, revamped upper made from heat pressed TPU embroidered yarns, and a refined collar shape that alleviates pressure on the Achilles. Light, fast and unquestionably responsive, the Mach 4 delivers a daily dose of speed.",
+            "price": "125",
+            "img": "https://www.hokaoneone.eu/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dwcfb830bd/images/(1113528-BFFS)_(1).jpg?sw=483&sh=447&sm=fit&sfrm=png&bgcolor=ffffff",
+            "qty": "24",
+            "sizes": ["6, 7, 9, 11"]
+        },
+        {
+            "id": "4",
+            "brand": "Asics",
+            "model": "Novablast",
+            "color": "French Blue / Digital Aqua",
+            "description": "The NOVABLAST™ shoe is for neutral runners seeking a responsive running experience. This lightweight design includes our FLYTEFOAM™ Blast midsole foam for an energetic bounce with each stride.",
+            "price": "130",
+            "img": "https://images.asics.com/is/image/asics/1011A681_402_SR_RT_GLB?$zoom$",
+            "qty": "3",
+            "sizes": ["6, 7, 9"]
+        },
+        {
+            "id": "5",
+            "brand": "Nike",
+            "model": "ZoomX Vaporfly Next% 2",
+            "color": "Aurora Green / Chlorine Blue",
+            "description": "Continue the next evolution of speed with a racing shoe made to you help chase new goals and records.The Nike ZoomX Vaporfly Next% 2 builds on the model racers everywhere love.It helps improve comfort and breathability with a redesigned upper.From a 10K to a marathon, the 2 still has the responsive cushioning and secure support to push you towards your personal best.",
+            "price": "250",
+            "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/228c9922-686e-443d-b04b-16857e9af198/zoomx-vaporfly-next-2-racing-shoe-tdbRhZ.png",
+            "qty": "2",
+            "sizes": ["9, 11"]
+        },
+        {
+            "id": "6",
+            "brand": "Nike",
+            "model": "Mach 4",
+            "color": "Blue Fog / Fiesta",
+            "description": "Get after those long runs with the Nike ZoomX Invincible Run Flyknit. A lightweight and responsive foam delivers a super-soft feel and helps deliver energy with every step. Breathable and secure, it's one of our most tested shoes. Lace up and feel the potential when your foot hits the pavement.",
+            "price": "165",
+            "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e5826cb4-e51f-47f4-966c-f2bdb69b5317/zoomx-invincible-run-flyknit-running-shoe-lQ6JKM.png",
+            "qty": "10",
+            "sizes": ["6, 7, 9, 11"]
+        }
+    ]
+}

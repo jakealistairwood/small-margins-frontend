@@ -1,0 +1,33 @@
+@import '../styles/abstracts/variables';
+
+.banner {
+    display: flex;
+    align-items: flex-end;
+    height: 80vh;
+    position: relative;
+    background-image: url('../public/img/sm-banner-img.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    .bannerContent {
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    h4 {
+        color: #fafafa;
+        font-weight: 400;
+        font-family: $secondaryFont;
+        letter-spacing: 0.1rem;
+    }
+
+    h1 {
+        color: white;
+        font-size: 3rem;
+        letter-spacing: -0.1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: $secondaryFont;
+    }
+}

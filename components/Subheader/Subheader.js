@@ -5,22 +5,27 @@ const Subheader = () => {
 
     const links = [
         {
+            id: 1,
             href: '/',
             name: 'Home'
         },
         {
+            id: 2,
             href: '#',
             name: 'About'
         },
         {
+            id: 3,
             href: '#',
             name: 'Shoes'
         },
         {
+            id: 4,
             href: '#',
             name: 'Articles'
         },
         {
+            id: 5,
             href:'#',
             name: 'Contact'
         }
@@ -30,7 +35,7 @@ const Subheader = () => {
         <nav className={styles.subheader}>
             <ul>
                 {links.map((link) => (
-                    <Link href={link.href}>
+                    <Link key={link.id} href={link.href}>
                         <a><li>{link.name}</li></a>
                     </Link>
                 ))}

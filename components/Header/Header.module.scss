@@ -16,4 +16,32 @@
             font-weight: 700;
         }
     }
+
+    .userControls {
+        display: flex;
+        align-items: center;
+
+        .modalBtn {
+            display: flex;
+            align-items: center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+
+            span {
+                padding-right: 10px;
+                font-size: .9rem;
+            }
+        }
+
+        .favouritesIcon {
+            font-size: 1.2rem;
+            margin-left: 20px;
+        }
+
+        .cartIcon {
+            font-size: 1.4rem;
+            margin-left: 20px;
+        }
+    }
 }
