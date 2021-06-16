@@ -1,19 +1,40 @@
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
-import Head from 'next/head'
-import Image from 'next/image'
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.scss'
-// import BannerImg from '../public/img/sm-banner-img.jpeg'
+import axios from 'axios'
+import { API_URL } from '../config/index'
+import Shoe from '../components/Shoe'
 
-export default function Home() {
+export default function Home({ shoes }) {
+
   return (
     <Layout>
       <div className={styles.banner}>
         <div className={styles.bannerContent}>
-          <h4>Introducing...</h4>
-          <h1>The Hyperion Elite V2's</h1>
+          {/* <h1>Supercharge Your Efforts</h1> */}
         </div>
       </div>
+      <section className={styles.trending}>
+        <div className={styles.sectionHeader}>
+          <h2>Trending Now</h2>
+          <div className={styles.designDetail}></div>
+        </div>
+        <div className={styles.gridContainer}>
+          {shoes.map((shoe) => (
+            <Shoe shoe={shoe} />
+          ))}
+        </div>
+      </section>
     </Layout>
   )
 }
+
+export const getServerSideProps = async() => {
+  const res = await fetch(`${API_URL}/api/shoes`)
+  const shoes = await res.json()
+
+  return {
+      props: { shoes },
+  }
+}
+
+

@@ -5,29 +5,56 @@
     align-items: flex-end;
     height: 80vh;
     position: relative;
-    background-image: url('../public/img/sm-banner-img.jpeg');
+    background-image: url('../public/img/maxresdefault.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center center;
 
-    .bannerContent {
-        margin-bottom: 50px;
-        margin-left: 50px;
+    // .bannerContent {
+    //     background-color: rgba(0, 0, 0, 0.5);
+    //     padding: 20px;
+
+    //     h4 {
+    //         color: #fafafa;
+    //         font-weight: 400;
+    //         font-family: $secondaryFont;
+    //         letter-spacing: 0.1rem;
+    //     }
+    
+    //     h1 {
+    //         color: white;
+    //         font-size: 3rem;
+    //         letter-spacing: -0.2rem;
+    //         text-transform: uppercase;
+    //         font-weight: 700;
+    //         font-family: $secondaryFont;
+    //     }
+    // }
+}
+
+.trending {
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+
+    .sectionHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 70px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
     }
 
-    h4 {
-        color: #fafafa;
-        font-weight: 400;
-        font-family: $secondaryFont;
-        letter-spacing: 0.1rem;
-    }
-
-    h1 {
-        color: white;
-        font-size: 3rem;
-        letter-spacing: -0.1rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-family: $secondaryFont;
+    .gridContainer {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        column-gap: 2rem;
+        margin: 50px 0;
     }
 }

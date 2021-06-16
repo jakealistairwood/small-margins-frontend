@@ -1,0 +1,20 @@
+.shoe {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    .shoeImg {
+        width: inherit;
+        height: 250px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .shoeDetails {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
