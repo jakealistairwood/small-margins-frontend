@@ -47,7 +47,7 @@ export default function Home({ shoes }) {
 }
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`${API_URL}/api/shoes`)
+  const res = await fetch(`${API_URL}/shoes`)
   const shoes = await res.json()
 
   return {

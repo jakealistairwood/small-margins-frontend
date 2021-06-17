@@ -10,7 +10,7 @@ export default function ShoeIndexPage({ shoe }) {
 }
 
 export const getStaticPaths = async() => {
-    const res = await fetch(`${API_URL}/api/shoes`)
+    const res = await fetch(`${API_URL}/shoes`)
     const shoes = await res.json()
 
     const paths = shoes.map((shoe) => ({
@@ -24,12 +24,12 @@ export const getStaticPaths = async() => {
 }
 
 export const getStaticProps = async({ params: {slug} }) => {
-    const res = await fetch(`${API_URL}/api/shoes/${slug}`)
+    const res = await fetch(`${API_URL}/shoes?slug=${slug}`)
     const shoes = await res.json()
     
     return {
         props: {
-            shoe: shoes[0]
+            shoe: shoes[0],
         }, 
         revalidate: 1
     }

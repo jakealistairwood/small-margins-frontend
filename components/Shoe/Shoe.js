@@ -6,7 +6,7 @@ const Shoe = ({ shoe }) => {
         <Link href={`/shoes/${shoe.slug}`}>
             <a className={styles.shoe}>
                 <div className={styles.shoeImg}>
-                    <img src={shoe.img} alt={`${shoe.brand} ${shoe.model}`} />
+                    <img src={shoe.image.formats.thumbnail.url} alt={`${shoe.brand} ${shoe.model}`} />
                 </div>
                 <div className={styles.shoeDetails}>
                     <h3>{shoe.brand} {shoe.model}</h3>

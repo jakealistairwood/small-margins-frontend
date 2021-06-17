@@ -20,7 +20,7 @@ export default function ShoesPage({ shoes }) {
 }
 
 export const getStaticProps = async() => {
-    const res = await fetch(`${API_URL}/api/shoes`)
+    const res = await fetch(`${API_URL}/shoes`)
     const shoes = await res.json()
     return {
         props: { shoes }
