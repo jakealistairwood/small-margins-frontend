@@ -2,6 +2,7 @@
     "shoes": [
         {
             "id": "1",
+            "slug": "saucony-endorphin-speeds",
             "brand": "Saucony",
             "model": "Endorphin Speed 2",
             "color": "Reverie",
@@ -12,6 +13,7 @@
         },
         {
             "id": "2",
+            "slug": "nb-fuelcell-rc-elite-v2",
             "brand": "New Balance",
             "model": "FuelCell RC Elite v2",
             "color": "Deep violet with black",
@@ -22,6 +24,7 @@
         },
         {
             "id": "3",
+            "slug": "hokaoneone-mach4",
             "brand": "Hoka One One",
             "model": "Mach 4",
             "color": "Blue Fog / Fiesta",
@@ -32,6 +35,7 @@
         },
         {
             "id": "4",
+            "slug": "asics-novablast",
             "brand": "Asics",
             "model": "Novablast",
             "color": "French Blue / Digital Aqua",
@@ -42,6 +46,7 @@
         },
         {
             "id": "5",
+            "slug": "nike-vaporfly-next2",
             "brand": "Nike",
             "model": "ZoomX Vaporfly Next% 2",
             "color": "Aurora Green / Chlorine Blue",
@@ -52,6 +57,7 @@
         },
         {
             "id": "6",
+            "slug": "nike-zoomx-invincible-flyknit",
             "brand": "Nike",
             "model": "ZoomX Invincible FlyKnit",
             "color": "Blue Fog / Fiesta",

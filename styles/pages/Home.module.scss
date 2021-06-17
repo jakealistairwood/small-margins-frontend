@@ -1,11 +1,11 @@
-@import '../styles/abstracts/variables';
+@import '../abstracts/variables';
 
 .banner {
     display: flex;
     align-items: flex-end;
     height: 80vh;
     position: relative;
-    background-image: url('../public/img/maxresdefault.jpg');
+    background-image: url('../../public/img/maxresdefault.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -118,18 +118,21 @@
                 padding: 20px;
                 color: white;
                 width: 100%;
+                text-transform: uppercase;
+                font-family: $secondaryFont;
+                font-size: 1.5rem;
             }
         }
 
         .article1 {
-            background-image: url('../public/img/runners-knee.jpg');
+            background-image: url('../../public/img/runners-knee.jpg');
         }
 
         .article2 {
-            background-image: url('../public/img/runners.jpg');
+            background-image: url('../../public/img/runners.jpg');
         }
         .article3 {
-            background-image: url('../public/img/running-benefits.jpg');
+            background-image: url('../../public/img/running-benefits.jpg');
         }
     }
 }

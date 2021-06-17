@@ -1,6 +1,5 @@
 import Layout from '../components/Layout'
-import styles from '../styles/Home.module.scss'
-import axios from 'axios'
+import styles from '../styles/pages/Home.module.scss'
 import { API_URL } from '../config/index'
 import Shoe from '../components/Shoe'
 

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Shoe = ({ shoe }) => {
     return (
-        <Link href="#">
+        <Link href={`/shoes/${shoe.slug}`}>
             <a className={styles.shoe}>
                 <div className={styles.shoeImg}>
                     <img src={shoe.img} alt={`${shoe.brand} ${shoe.model}`} />

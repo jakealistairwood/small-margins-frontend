@@ -16,7 +16,7 @@ const Subheader = () => {
         },
         {
             id: 3,
-            href: '#',
+            href: '/shoes',
             name: 'Shoes'
         },
         {
