@@ -11,7 +11,16 @@ const Shoe = ({ shoe }) => {
                 <div className={styles.shoeDetails}>
                     <h3>{shoe.brand} {shoe.model}</h3>
                     <p>{shoe.description.slice(0, 150)}...</p>
-                    <p>£{shoe.price}</p>
+                    <div className={styles.cardFooter}>
+                        <p className={styles.price}>£{shoe.price}</p>
+                        <div className={styles.ctaMessage}>
+                            {shoe.qty <=5 ? (
+                                <p className={styles.warningMessage}>Hurry! Selling Out Quickly</p>
+                            ) : (
+                                <p className={styles.stockMessage}>In Stock</p>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </a>
         </Link>

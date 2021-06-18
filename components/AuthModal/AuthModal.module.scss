@@ -1,0 +1,88 @@
+@import '../../styles/abstracts/variables';
+
+.overlay {
+    // display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 950;
+}
+
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 999;
+    background-color: white;
+    padding: 40px;
+    width: 25%;
+
+    .authHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .iconContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+
+    .authForm {
+        margin: 20px 0;
+        .formControl {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            label {
+                margin-bottom: 10px;
+                font-family: $secondaryFont;
+                font-weight: 300;
+            }
+
+            input {
+                border: none;
+                background-color: #f7f7f7;
+                height: 40px;
+                outline: none;
+                padding-left: 25px;
+            }
+        }
+
+        .btnContainer {
+            display: flex;
+            align-items: center;
+
+            button {
+                height: 40px;
+                width: 50%;
+                border: none;
+                font-family: $primaryFont;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .loginBtn {
+                background-color: $darkGrey;
+                margin-right: 10px;
+                color: white;
+            }
+
+            .registerBtn {
+                margin-left: 10px;
+                background-color: rgb(0, 123, 255);
+                color: white;
+            }
+        }
+    }
+}

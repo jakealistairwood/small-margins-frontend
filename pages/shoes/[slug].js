@@ -3,11 +3,12 @@ import { API_URL } from '../../config/index'
 import styles from '../../styles/pages/ShoeIndex.module.scss'
 
 export default function ShoeIndexPage({ shoe }) {
+
     return (
         <Layout>
             <div className={styles.shoe}>
                 <div className={styles.imgContainer}>
-                    <img src={shoe.image.formats.medium.url} alt={`${shoe.brand} ${shoe.model}`} />
+                    <img src={shoe.image.formats.small.url} alt={`${shoe.brand} ${shoe.model}`} />
                 </div>
                 <div className={styles.shoeContent}>
                     <h2>{shoe.brand} {shoe.model}</h2>

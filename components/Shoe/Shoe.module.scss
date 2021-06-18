@@ -8,6 +8,7 @@
     .shoeImg {
         width: inherit;
         height: 250px;
+        padding: 10px;
 
         img {
             width: 100%;
@@ -24,6 +25,34 @@
             letter-spacing: 0.02rem;
             color: #6c6c6c;
             font-weight: 300;
+        }
+
+        .cardFooter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 2px solid #f5f5f5;
+            border-bottom: 2px solid #f5f5f5;
+
+            .price {
+                font-weight: 700;
+                color: $darkGrey;
+            }
+    
+            .ctaMessage {
+
+                .warningMessage {
+                    color: #eb4343;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+
+                .stockMessage {
+                    color: green;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }

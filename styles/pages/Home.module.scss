@@ -178,4 +178,21 @@
             background-image: url('../../public/img/running-benefits.jpg');
         }
     }
+
+    .primaryBtn {
+        background-color: $vividGreen;
+        padding: 15px 50px;
+        font-family: $primaryFont;
+        font-size: 1rem;
+        text-transform: uppercase;
+        border: none;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        &:hover {
+            background-color: white;
+        }
+    }
 }

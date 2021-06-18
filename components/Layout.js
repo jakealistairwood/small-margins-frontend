@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from './Header'
 import Subheader from './Subheader'
 import Footer from './Footer'
+import AuthModal from './AuthModal'
 
 const Layout = ({ title, keywords, description, children}) => {
     return (
@@ -12,6 +13,7 @@ const Layout = ({ title, keywords, description, children}) => {
             </Head>
             <Header />  
             <Subheader />
+            <AuthModal />
             <div className="app">
                 {children}
             </div>

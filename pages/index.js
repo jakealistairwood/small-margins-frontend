@@ -51,7 +51,10 @@ export default function Home({ shoes }) {
                 <h4>Top 10 health benefits of running</h4>
               </div>
             </div>
-          </div> 
+          </div>
+          <Link href="/articles">
+          <button className={styles.primaryBtn}>View More</button>
+          </Link> 
         </section>
       </Layout>
     </>
