@@ -1,5 +1,6 @@
 import Layout from '../../components/Layout'
 import { API_URL } from '../../config/index'
+import styles from '../../styles/pages/ArticleIndex.module.scss'
 
 export default function ArticleIndexPage({ article }) {
 
@@ -7,8 +8,12 @@ export default function ArticleIndexPage({ article }) {
 
     return (
         <Layout>
-            <div>
-                {/* <h1>{article.Title}</h1> */}
+            <div className={styles.article}>
+                <div className={styles.imgContainer}>
+                    <img src={article.image.formats.medium.url} />
+                </div>
+                <h1>{article.Title}</h1>
+                <p>{article.Description}</p>
             </div>
         </Layout>
     )
@@ -34,7 +39,7 @@ export const getStaticProps = async({ params: {slug} }) => {
     
     return {
         props: {
-            shoe: articles[0],
+            article: articles[0],
         }, 
         revalidate: 1
     }
