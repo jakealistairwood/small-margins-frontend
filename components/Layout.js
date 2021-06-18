@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './Header'
 import Subheader from './Subheader'
+import Footer from './Footer'
 
 const Layout = ({ title, keywords, description, children}) => {
     return (
@@ -11,9 +12,10 @@ const Layout = ({ title, keywords, description, children}) => {
             </Head>
             <Header />  
             <Subheader />
-            <div className="container">
+            <div className="app">
                 {children}
-            </div>  
+            </div>
+            <Footer />  
         </div>
     )
 }

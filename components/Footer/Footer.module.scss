@@ -1,0 +1,47 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/layout/layout';
+
+.footer {
+    background-color: #e8e8e8;
+    padding: 100px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            a {
+                font-family: $headerFont;
+                letter-spacing: 0.2rem;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+
+            a {
+                li {
+                    margin: 0 20px;
+                    list-style-type: disc;
+                }
+            }
+        }
+
+        .socialIcons {
+            display: flex;
+            .iconContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                background-color: $darkGrey;
+                margin: 10px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+    }
+}

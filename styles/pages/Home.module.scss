@@ -2,40 +2,70 @@
 
 .banner {
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
     height: 80vh;
     position: relative;
-    background-image: url('../../public/img/maxresdefault.jpg');
+    background-image: url('../../public/img/nike-vaporfly-next-2-feature.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    width: 100%;
 
-    // .bannerContent {
-    //     background-color: rgba(0, 0, 0, 0.5);
-    //     padding: 20px;
+    &::before {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+        position: absolute;
+        content: '';
+        inset: 0;
+    }
 
-    //     h4 {
-    //         color: #fafafa;
-    //         font-weight: 400;
-    //         font-family: $secondaryFont;
-    //         letter-spacing: 0.1rem;
-    //     }
+    .bannerContent {
+        display: flex;
+        flex-direction: column;
+        // background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        width: 100%;
+        margin-left: 10%;
+        margin-bottom: 150px;
+        z-index: 10;
     
-    //     h1 {
-    //         color: white;
-    //         font-size: 3rem;
-    //         letter-spacing: -0.2rem;
-    //         text-transform: uppercase;
-    //         font-weight: 700;
-    //         font-family: $secondaryFont;
-    //     }
-    // }
+        h1 {
+            color: #fafafa;
+            font-size: 3.7rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-style: italic;
+            font-family: $primaryFont;
+        }
+
+        p {
+            font-family: $secondaryFont;
+            color:#96eeea;
+            font-weight: 300;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .bannerBtn {
+            width: 150px;
+            padding: 7px 20px;
+            margin-top: 30px;
+            background-color: white;
+            font-family: $primaryFont;
+            font-size: 1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: none;
+        }
+    }
 }
 
 .trending {
     display: flex; 
     flex-direction: column;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 
     .sectionHeader {
         display: flex;
@@ -106,21 +136,34 @@
         .article {
             display: flex;
             align-items: flex-end;
-            height: 300px;
+            height: 350px;
             width: 33.333%;
             margin: 20px;
-            background-color: white;
             background-repeat: no-repeat;
             background-size: cover;
 
-            h2 {
-                background-color: rgba(0, 0, 0, 0.7);
+            .articleHeader {
+                display: flex;
+                flex-direction: column;
                 padding: 20px;
-                color: white;
+                background-color: rgba(0, 0, 0, 0.7);
                 width: 100%;
-                text-transform: uppercase;
-                font-family: $secondaryFont;
-                font-size: 1.5rem;
+
+                h4 {
+                    color: white;
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-family: $primaryFont;
+                    font-size: 1.5rem;
+                }
+
+                h5 {
+                    color: $vividGreen;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    font-family: $secondaryFont;
+                    margin-bottom: 10px;
+                }
             }
         }
 

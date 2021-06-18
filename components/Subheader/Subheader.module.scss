@@ -1,8 +1,10 @@
+@import '../../styles/abstracts/variables';
+
 .subheader {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #69EBD0;
+    background-color: $vividGreen;
 
     ul {
         display: flex;
@@ -13,10 +15,11 @@
                 list-style: none;
                 padding: 0 20px;
                 font-weight: 700;
+                font-family: $headerFont;
                 font-size: .6rem;
                 letter-spacing: 0.05rem;
                 text-transform: uppercase;
-                color: #293132;
+                color: $darkGrey;
             }
         }
     }
