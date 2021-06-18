@@ -11,7 +11,7 @@ const Subheader = () => {
         },
         {
             id: 2,
-            href: '#',
+            href: '/about',
             name: 'About'
         },
         {
@@ -21,12 +21,12 @@ const Subheader = () => {
         },
         {
             id: 4,
-            href: '#',
+            href: '/articles',
             name: 'Articles'
         },
         {
             id: 5,
-            href:'#',
+            href:'/contact',
             name: 'Contact'
         }
     ]

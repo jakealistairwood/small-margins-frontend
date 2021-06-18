@@ -2,9 +2,13 @@ import Layout from '../components/Layout'
 import styles from '../styles/pages/Home.module.scss'
 import { API_URL } from '../config/index'
 import Shoe from '../components/Shoe'
+import Article from '../components/Article'
 import Link from 'next/link'
+import { uuid } from 'uuidv4'
 
-export default function Home({ shoes }) {
+export default function Home({ shoes, articles }) {
+
+  console.log(articles)
 
   return (
     <>
@@ -23,7 +27,7 @@ export default function Home({ shoes }) {
           </div>
           <div className={styles.gridContainer}>
             {shoes.map((shoe) => (
-              <Shoe shoe={shoe} />
+              <Shoe key={uuid()} shoe={shoe} />
             ))}
           </div>
         </section>
@@ -33,24 +37,9 @@ export default function Home({ shoes }) {
             <div className={styles.designDetail}></div>
           </div>
           <div className={styles.articleContainer}>
-            <div className={`${styles.article} ${styles.article1}`}>
-              <div className={styles.articleHeader}>
-                <h5>Health</h5>
-                <h4>5 exercises to beat IT Band Syndrome</h4>
-              </div>
-            </div>
-            <div className={`${styles.article} ${styles.article2}`}>
-              <div className={styles.articleHeader}>
-                <h5>Guides</h5>
-                <h4>Our beginner-friendly guide to running</h4>
-              </div>
-            </div>
-            <div className={`${styles.article} ${styles.article3}`}>
-              <div className={styles.articleHeader}>
-                <h5>Health</h5>
-                <h4>Top 10 health benefits of running</h4>
-              </div>
-            </div>
+            {articles.map((article) => (
+              <Article key={uuid()} article={article} />
+            ))}
           </div>
           <Link href="/articles">
           <button className={styles.primaryBtn}>View More</button>
@@ -62,11 +51,16 @@ export default function Home({ shoes }) {
 }
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`${API_URL}/shoes`)
-  const shoes = await res.json()
+  const resOne = await fetch(`${API_URL}/shoes`)
+  const resTwo = await fetch(`${API_URL}/articles`)
+  const shoes = await resOne.json()
+  const articles = await resTwo.json()
 
   return {
-      props: { shoes },
+      props: { 
+        shoes, 
+        articles: articles.slice(0, 3) 
+      },
   }
 }
 
