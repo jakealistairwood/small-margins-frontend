@@ -17,7 +17,11 @@ export default function Home({ shoes, articles }) {
           <div className={styles.bannerContent}>
             <h1>Supercharge Your Efforts</h1>
             <p>Hit all your PB's with the Nike Vapofly Next% 2</p>
-            <button className={styles.bannerBtn}>Shop Now</button>
+            <Link href="/shoes/vaporfly-next-2">
+              <a>
+                <button className={styles.bannerBtn}>Shop Now</button>
+              </a>
+            </Link>
           </div>
         </div>
         <section className={styles.trending}>
@@ -30,6 +34,10 @@ export default function Home({ shoes, articles }) {
               <Shoe key={uuid()} shoe={shoe} />
             ))}
           </div>
+        </section>
+        <section className={styles.featured}>
+          <div className={styles.featureOne}></div>
+          <div className={styles.featureTwo}></div>
         </section>
         <section className={styles.articles}>
           <div className={styles.sectionHeader}>

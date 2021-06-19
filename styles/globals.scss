@@ -32,6 +32,13 @@ p {
   font-weight: 400;
 }
 
+button {
+  cursor: pointer;
+  font-family: $primaryFont;
+  text-transform: uppercase;
+  outline: none;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;

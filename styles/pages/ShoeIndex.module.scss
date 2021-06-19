@@ -1,3 +1,5 @@
+@import '../abstracts/variables';
+
 .shoe {
     display: flex;
     margin: 50px auto;
@@ -5,7 +7,7 @@
 
     .imgContainer {
         display: flex;
-        flex: 0.5;
+        flex: 0.4;
         padding: 20px;
 
         img {
@@ -15,10 +17,33 @@
 
     .shoeContent {
         padding: 20px;
-        flex: 0.5;
+        flex: 0.6;
+        margin-left: 150px;
+
+        h1 {
+            font-size: 3rem;
+        }
 
         h2 {
-            font-size: 3.5rem;
+            font-size: 1.2rem;
+            font-family: $secondaryFont;
+            font-weight: 700;
+        }
+
+        p {
+            font-family: $secondaryFont;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-family: $secondaryFont;
+        }
+
+        ul {
+            li {
+                font-family: $secondaryFont;
+                font-weight: 300;
+            }
         }
     }
 }

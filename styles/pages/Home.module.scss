@@ -98,6 +98,20 @@
     }
 }
 
+.featured {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $vividGreen;
+    padding: 50px 10%;
+    margin: 0 auto;
+
+    .featureOne {
+        // background-image: url('../../public/img/')
+    }
+}
+
 .articles {
     padding: 50px 10%;
     display: flex;

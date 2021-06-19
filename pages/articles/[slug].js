@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout'
 import { API_URL } from '../../config/index'
 import styles from '../../styles/pages/ArticleIndex.module.scss'
+import ReactMarkdown from 'react-markdown'
 
 export default function ArticleIndexPage({ article }) {
 
@@ -13,7 +14,7 @@ export default function ArticleIndexPage({ article }) {
                     <img src={article.image.formats.medium.url} />
                 </div>
                 <h1>{article.Title}</h1>
-                <p>{article.Description}</p>
+                <ReactMarkdown>{article.Description}</ReactMarkdown>
             </div>
         </Layout>
     )

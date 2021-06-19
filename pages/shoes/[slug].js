@@ -1,6 +1,8 @@
 import Layout from '../../components/Layout'
 import { API_URL } from '../../config/index'
 import styles from '../../styles/pages/ShoeIndex.module.scss'
+import ReactMarkdown from 'react-markdown'
+
 
 export default function ShoeIndexPage({ shoe }) {
 
@@ -11,8 +13,13 @@ export default function ShoeIndexPage({ shoe }) {
                     <img src={shoe.image.formats.small.url} alt={`${shoe.brand} ${shoe.model}`} />
                 </div>
                 <div className={styles.shoeContent}>
-                    <h2>{shoe.brand} {shoe.model}</h2>
-                    <p>{shoe.description}</p>
+                    <div className={styles.contentHeader}>
+                        <h1>{shoe.brand} {shoe.model}</h1>
+                        <p>{shoe.color}</p>
+                    </div>
+                    <ReactMarkdown>{shoe.description}</ReactMarkdown>
+                    <div className={styles.contentFooter}>
+                    </div>
                 </div>
             </div>
         </Layout>
