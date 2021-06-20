@@ -8,18 +8,25 @@ export default function ArticlesPage({ articles }) {
     console.log(articles)
     return (
         <Layout>
-            <div className={styles}>
-                <h1>All our running shoes</h1>    
-            </div>
-            <div>
+            <div className={styles.articles}>
+                <div className={styles.pageHeader}>
+                    <h1>All our running shoes</h1> 
+                </div>
+                <div className={styles.articlesContainer}>
                 {articles.map((article) => (
                     <Link href={`/articles/${article.slug}`}>
-                    <a>
-                        <img src={article.image.formats.small.url} alt={article.Title} />
-                        <h3>{article.Title}</h3>
+                    <a className={styles.article}>
+                        <div className={styles.imgContainer}>
+                            <img src={article.image.formats.thumbnail.url} alt={article.Title} />
+                        </div>
+                        <div className={styles.articleInfo}>
+                            <h5>{article.category}</h5>
+                            <h3>{article.Title}</h3>
+                        </div>
                     </a>
                     </Link>
                 ))}
+                </div>  
             </div>
         </Layout>
     )
