@@ -47,11 +47,20 @@ const Footer = () => {
                     </Link> 
                 </div>
                 <ul className={styles.links}>
+                    <h5>Site</h5>
                     {siteLinks.map((link) => (
                         <Link key={link.id} href={link.href}>
                             <a><li>{link.name}</li></a>
                         </Link>
                     ))}
+                </ul>
+                <ul className={styles.links}>
+                    <h5>Support</h5>
+                    <a><li>Customer Service</li></a>
+                    <a><li>Returns & Refunds</li></a>
+                    <a><li>Delivery</li></a>
+                    <a><li>Size Charts</li></a>
+                    <a><li>Discounts</li></a>
                 </ul>
                 <div className={styles.socialIcons}>
                     <div className={styles.iconContainer}>

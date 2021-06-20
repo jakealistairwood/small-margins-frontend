@@ -5,6 +5,10 @@
     flex-direction: column;
     width: 300px;
 
+    @media screen and (max-width: 1080px) {
+        width: 250px;
+    }
+
     .shoeImg {
         width: inherit;
         height: 250px;

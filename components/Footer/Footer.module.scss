@@ -19,12 +19,26 @@
 
         .links {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            margin-top: 0;
+
+            h5 {
+                font-size: 1.2rem;
+                margin-bottom: 7px;
+                text-transform: uppercase;
+            }
 
             a {
                 li {
-                    margin: 0 20px;
-                    list-style-type: disc;
+                    list-style-type: none;
+                    font-family: $secondaryFont;
+                    font-weight: 300;
+                    font-size: 0.8rem;
+                    margin-bottom: 5px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }

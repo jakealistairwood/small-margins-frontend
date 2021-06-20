@@ -31,4 +31,8 @@
     grid-template-columns: repeat(4, 1fr);
     margin: 100px auto;
     width: 80%;
+
+    @media screen and (max-width: 1440px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

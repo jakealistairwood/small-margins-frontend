@@ -1,6 +1,11 @@
+import { useState } from 'react'
 import styles from './Login.module.scss'
 
 const Login = ({ displayRegisterModal }) => {
+
+    const [ username, setUsername ] = useState('')
+    const [ password, setPassword ] = useState('')
+
     return (
         <form className={styles.authForm} onSubmit={(e) => e.preventDefualt()}>
             <div className={styles.formControl}>
@@ -9,6 +14,8 @@ const Login = ({ displayRegisterModal }) => {
                     type="text" 
                     name="username" 
                     id="username" 
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                 /> 
             </div>
             <div className={styles.formControl}>
@@ -17,6 +24,8 @@ const Login = ({ displayRegisterModal }) => {
                     type="password" 
                     name="password" 
                     id="password" 
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                 /> 
             </div>
             <div className={styles.btnContainer}>

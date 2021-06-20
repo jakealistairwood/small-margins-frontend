@@ -1,6 +1,11 @@
+import { useState } from 'react'
 import styles from './Register.module.scss'
 
 const Register = ({ displayLoginModal }) => {
+
+    const [ email, setEmail ] = useState('')
+    const [ username, setUsername ] = useState('')
+    const [ password, setPassword ] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -13,7 +18,9 @@ const Register = ({ displayLoginModal }) => {
                 <input 
                     type="email" 
                     name="email" 
-                    id="email" 
+                    id="email"
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)}
                 /> 
             </div>
             <div className={styles.formControl}>
@@ -21,7 +28,9 @@ const Register = ({ displayLoginModal }) => {
                 <input 
                     type="text" 
                     name="username" 
-                    id="username" 
+                    id="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)} 
                 /> 
             </div>
             <div className={styles.formControl}>
@@ -30,6 +39,8 @@ const Register = ({ displayLoginModal }) => {
                     type="password" 
                     name="password" 
                     id="password" 
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                 /> 
             </div>
             <div className={styles.btnContainer}>
