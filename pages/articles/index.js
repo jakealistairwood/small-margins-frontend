@@ -10,7 +10,8 @@ export default function ArticlesPage({ articles }) {
         <Layout>
             <div className={styles.articles}>
                 <div className={styles.pageHeader}>
-                    <h1>All our running shoes</h1> 
+                    <h1>Our Articles</h1> 
+                    <div className={styles.designDetail}></div>
                 </div>
                 <div className={styles.articlesContainer}>
                 {articles.map((article) => (
@@ -22,6 +23,7 @@ export default function ArticlesPage({ articles }) {
                         <div className={styles.articleInfo}>
                             <h5>{article.category}</h5>
                             <h3>{article.Title}</h3>
+                            <p>{article.Description.slice(0, 150)}...</p>
                         </div>
                     </a>
                     </Link>

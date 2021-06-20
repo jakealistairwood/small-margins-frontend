@@ -1,0 +1,50 @@
+@import '../../../styles/abstracts/variables';
+
+.authForm {
+    margin: 20px 0;
+    .formControl {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        label {
+            margin-bottom: 10px;
+            font-family: $secondaryFont;
+            font-weight: 300;
+        }
+
+        input {
+            border: none;
+            background-color: #f7f7f7;
+            height: 40px;
+            outline: none;
+            padding-left: 25px;
+        }
+    }
+
+    .btnContainer {
+        display: flex;
+        align-items: center;
+
+        button {
+            height: 40px;
+            width: 50%;
+            border: none;
+            font-family: $primaryFont;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .loginBtn {
+            background-color: $darkGrey;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .registerBtn {
+            margin-left: 10px;
+            background-color: rgb(0, 123, 255);
+            color: white;
+        }
+    }
+}
