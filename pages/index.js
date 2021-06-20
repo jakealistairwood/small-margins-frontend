@@ -37,7 +37,9 @@ export default function Home({ shoes, articles }) {
         </section>
         <section className={styles.featured}>
           <div className={styles.featureOne}></div>
-          <div className={styles.featureTwo}></div>
+          <Link href='/shoes/fuel-cell-rc-elite-v2'>
+            <a className={styles.featureTwo}></a>
+          </Link>
         </section>
         <section className={styles.articles}>
           <div className={styles.sectionHeader}>

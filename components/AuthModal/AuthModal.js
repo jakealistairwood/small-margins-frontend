@@ -1,13 +1,20 @@
+import { useContext } from 'react'
 import styles from './AuthModal.module.scss'
 import { FiX } from 'react-icons/fi'
+import AuthModalContext from '../../context/authModalContext'
 
 const AuthModal = () => {
+
+    const { modalOpen, toggleModal } = useContext(AuthModalContext)
+
+    const handleModalDisplay = modalOpen ? `${styles.active}` : "";
+
     return (
         <>
-            <div className={styles.modalContainer}>
+            <div className={`${styles.modalContainer} ${handleModalDisplay}`}>
                 <div className={styles.authHeader}>
                     <h2>Login</h2>
-                    <div className={styles.iconContainer}>
+                    <div className={styles.iconContainer} onClick={toggleModal}>
                         <FiX />
                     </div>
                 </div>
@@ -34,7 +41,7 @@ const AuthModal = () => {
                     </div>
                 </form>
             </div>
-            <div className={styles.overlay}></div>
+            <div className={`${styles.overlay} ${handleModalDisplay}`}></div>
         </>
     )
 }
