@@ -1,11 +1,14 @@
 import '../styles/globals.scss'
 import { AuthModalProvider } from '../context/authModalContext'
+import { AuthProvider } from '../context/authContext'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthModalProvider>
-      <Component {...pageProps} />
-    </AuthModalProvider>
+    <AuthProvider>
+      <AuthModalProvider>
+        <Component {...pageProps} />
+      </AuthModalProvider>
+    </AuthProvider>
   )
 }
 

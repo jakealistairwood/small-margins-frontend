@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import styles from './Register.module.scss'
+import AuthContext from '../../../context/authContext'
 
 const Register = ({ displayLoginModal }) => {
 
@@ -7,8 +8,11 @@ const Register = ({ displayLoginModal }) => {
     const [ username, setUsername ] = useState('')
     const [ password, setPassword ] = useState('')
 
+    const { register } = useContext(AuthContext)
+
     const handleSubmit = (e) => {
         e.preventDefault()
+        register({ username, email, password })
     }
 
     return (
