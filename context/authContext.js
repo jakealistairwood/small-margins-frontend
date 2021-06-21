@@ -7,6 +7,12 @@ const AuthContext = createContext()
 export const AuthProvider = ({ children }) => {
     const [ user, setUser ] = useState(null)
 
+    const router = useRouter()
+
+    useEffect(() => {
+        checkUserLoggedIn()
+    }, [])
+
     const register = async(user) => {
         console.log(user)
     }
@@ -30,17 +36,32 @@ export const AuthProvider = ({ children }) => {
 
         if(res.ok) {
             setUser(data.user)
+            router.push('/')
         } else {
             console.log(data.message)
         }
     }
 
-    const logout = () => {
-        console.log('logged out')
+    const logout = async() => {
+        const res = await fetch(`${NEXT_URL}/api/logout`, {
+            method: 'POST'
+        })
+
+        if(res.ok) {
+            setUser(null)
+            router.push('/')
+        }
     }
 
-    const checkUserLoggedIn = () => {
-        console.log('check')
+    const checkUserLoggedIn = async(user) => {
+        const res = await fetch(`${NEXT_URL}/api/user`)
+        const data = await res.json()
+
+        if(res.ok) {
+            setUser(data.user)
+        } else {
+            setUser(null)
+        }
     }
 
     return (

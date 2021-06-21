@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "cookie": "^0.4.1",
     "next": "10.2.3",
     "next-images": "^1.8.1",
     "react": "17.0.2",
