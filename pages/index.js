@@ -71,7 +71,7 @@ export const getServerSideProps = async() => {
   return {
       props: { 
         shoes, 
-        articles: articles.slice(0, 3) 
+        articles: articles.slice(0, 3)
       },
   }
 }
