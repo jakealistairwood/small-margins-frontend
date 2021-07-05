@@ -20,28 +20,14 @@ export default function ArticleIndexPage({ article }) {
     )
 }
 
-export const getStaticPaths = async() => {
-    const res = await fetch(`${API_URL}/articles`)
-    const articles = await res.json()
+export const getServerSideProps = async({ query: { slug }}) => {
 
-    const paths = articles.map((article) => ({
-        params: { slug: article.slug },
-    }))
-
-    return {
-        paths,
-        fallback: false
-    }
-}
-
-export const getStaticProps = async({ params: {slug} }) => {
     const res = await fetch(`${API_URL}/articles?slug=${slug}`)
     const articles = await res.json()
     
     return {
         props: {
-            article: articles[0],
-        }, 
-        revalidate: 1
+            article: articles[0]
+        }
     }
 }

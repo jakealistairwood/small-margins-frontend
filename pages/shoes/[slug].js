@@ -26,28 +26,14 @@ export default function ShoeIndexPage({ shoe }) {
     )
 }
 
-export const getStaticPaths = async() => {
-    const res = await fetch(`${API_URL}/shoes`)
-    const shoes = await res.json()
+export const getServerSideProps = async({ query: { slug }}) => {
 
-    const paths = shoes.map((shoe) => ({
-        params: { slug: shoe.slug },
-    }))
-
-    return {
-        paths,
-        fallback: false
-    }
-}
-
-export const getStaticProps = async({ params: {slug} }) => {
     const res = await fetch(`${API_URL}/shoes?slug=${slug}`)
     const shoes = await res.json()
-    
+
     return {
         props: {
-            shoe: shoes[0],
-        }, 
-        revalidate: 1
+            shoe: shoes[0]
+        }
     }
 }
